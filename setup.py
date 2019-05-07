@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 def readme():
     with open('README.md') as rm:
@@ -12,7 +12,7 @@ setup(
     author='Michael Benowitz',
     author_email='michaelbenowitz@nypl.org',
     license='MIT',
-    packages=['sfrCore'],
+    packages=find_packages(exclude=('tests',)),
     install_requires=[
         'psycopg2-binary',
         'sqlalchemy',
